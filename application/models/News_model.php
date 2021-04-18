@@ -24,4 +24,20 @@ class News_model extends CI_Model{
         $query = $this->db->query('SELECT * FROM news WHERE news_id='.$news_id);
         return $query->result();
     }
+    public function setNews($news_title, $news_text, $news_image){
+        $date = date('Y-m-d');
+
+        $this->db->query("INSERT INTO 
+                            news(
+                                news_title, news_text, news_img, news_date
+                                )
+                            VALUES(
+                                '$news_title',
+                                '$news_text',
+                                '$news_image',
+                                '$date'
+                                )
+                                ");
+
+    }
 }
