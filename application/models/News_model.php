@@ -11,7 +11,8 @@ class News_model extends CI_Model{
                                     news_img, 
                                     news_date, 
                                     SUBSTRING(news_text, 1, 50) as news_text
-                                    FROM news
+                                    FROM news 
+                                    ORDER BY news_id DESC
                                     ');
         return $query->result();
     }
