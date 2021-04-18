@@ -6,16 +6,21 @@ class Writer extends CI_Controller{
         $login = $this->input->post('login');
 
         if($password == 'root' && $login == 'root'){
-            echo 'succes';
+            $this->load->view('templates/header');
+            $this->load->view('writer_index');
+            $this->load->view('templates/footer');
         } 
         else{
-            echo 'wrong';
+            $data['error'] = 'Введены неверные данные';
+            $this->load->view('templates/header');
+            $this->load->view('writer_form', $data);
+            $this->load->view('templates/footer');
         }
     }
 
     public function index(){
         $this->load->view('templates/header');
-        $this->load->view('writer_index');
+        $this->load->view('writer_form');
         $this->load->view('templates/footer');
     }
 }
