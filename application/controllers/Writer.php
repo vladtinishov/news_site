@@ -40,5 +40,6 @@ class Writer extends CI_Controller{
         }
 
         $this->news_model->setNews($title, $text, $image_name);
+        header('Location: http://localhost/proj/');
     }
 }
