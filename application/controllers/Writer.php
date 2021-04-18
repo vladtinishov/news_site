@@ -12,4 +12,10 @@ class Writer extends CI_Controller{
             echo 'wrong';
         }
     }
+
+    public function index(){
+        $this->load->view('templates/header');
+        $this->load->view('writer_index');
+        $this->load->view('templates/footer');
+    }
 }
