@@ -1,0 +1,27 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
+#header{
+    padding: 15px;
+}
+#header_outer_ul{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+}
+#header_outer_ul ul{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    list-style: none;
+}
+#header_outer_ul ul:last-child{
+    justify-content: flex-end;
+}
+#header_outer_ul li{
+    padding: 0 5px;
+}
