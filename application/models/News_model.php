@@ -20,4 +20,8 @@ class News_model extends CI_Model{
         $query = $this->db->query('SELECT * FROM news WHERE news_date="'.date('Y-m-d').'"');
         return $query->result();
     }
+    public function getNews($news_id){
+        $query = $this->db->query('SELECT * FROM news WHERE news_id='.$news_id);
+        return $query->result();
+    }
 }

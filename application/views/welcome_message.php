@@ -5,7 +5,11 @@
     <?php foreach($news_data as $news): ?>
         
         <div class="news_header">
-            <h1 class="news_title"><?php echo $news->news_title?></h1>
+            <h1 class="news_title">
+                <a href="/proj/index.php/news/getnews/<?php echo $news->news_id?>">
+                    <?php echo $news->news_title?>
+                </a>
+            </h1>
             <div class="news_date"><?php echo $news->news_date?></div>
         </div>
 

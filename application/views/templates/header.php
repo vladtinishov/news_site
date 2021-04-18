@@ -13,8 +13,7 @@
 			<div id="header_logo">LOGO</div>
 			<ul id="header_links">
 				<li><a href="/proj">Главная</a></li>
-				<li><a href="#">Архив</a></li>
-				<li><a href="#">Войти / Зарегистрироваться</a></li>
+				<li><a href="/proj/index.php/news/getallnews">Архив</a></li>
 			</ul>
 			<ul>
 				<li><a href="#">t</a></li>

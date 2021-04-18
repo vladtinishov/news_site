@@ -6,7 +6,7 @@
         
         <div class="news_header">
             <h1 class="news_title">
-                <a href="getnews/<?php echo $news->news_id?>">
+                <a href="<?php echo $news->news_id?>">
                     <?php echo $news->news_title?>
                 </a>
             </h1>
@@ -22,5 +22,3 @@
     <?php endforeach?>
 
 </div>
-
-    
