@@ -16,6 +16,7 @@ class News_model extends CI_Model{
         return $query->result();
     }
     public function getTodayNews(){
+        $query = $this->db->query('SELECT * FROM news WHERE news_date="'.date('Y-m-d').'"');
         return $query->result();
     }
 }
