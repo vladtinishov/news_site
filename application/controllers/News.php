@@ -9,5 +9,6 @@ class News extends CI_Controller{
         $data['news_data'] = $this->news_model->getAllNews();
         $this->load->view('templates/header');
         $this->load->view('all_news', $data);
+        $this->load->view('templates/footer.php');
     }
 }

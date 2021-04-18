@@ -11,8 +11,8 @@
 
         <p class="news_text"><?php echo $news->news_text ?></p>
 
-        <?php if($news != ''):?>
-            <img src="<?php $news->news_img?>" alt="">
+        <?php if($news->news_img != ''):?>
+            <img src="<?php echo $news->news_img?>" alt="">
         <?php endif?>
 
     <?php endforeach?>

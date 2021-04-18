@@ -12,7 +12,7 @@
 		<ul id="header_outer_ul">
 			<div id="header_logo">LOGO</div>
 			<ul id="header_links">
-				<li><a href="#">Главная</a></li>
+				<li><a href="/proj">Главная</a></li>
 				<li><a href="#">Новости на неделю</a></li>
 				<li><a href="#">Архив</a></li>
 				<li><a href="#">Войти / Зарегистрироваться</a></li>
