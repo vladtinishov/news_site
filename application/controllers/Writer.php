@@ -23,4 +23,8 @@ class Writer extends CI_Controller{
         $this->load->view('writer_form');
         $this->load->view('templates/footer');
     }
+
+    public function setNews(){
+        echo 'hello';
+    }
 }
