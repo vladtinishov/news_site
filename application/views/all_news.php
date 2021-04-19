@@ -1,6 +1,12 @@
 <style><?php require_once('assets/css/news_list.css')?></style>
 
+
+
 <div class="news_list_style">
+
+    <div class="search">
+        <input type="text" id="title_search" placeholder="Поиск по заголовку">
+    </div>
 
     <?php foreach($news_data as $news): ?>
         
@@ -16,7 +22,7 @@
         <p class="news_text"><?php echo $news->news_text ?>...</p>
 
         <?php if($news->news_img != ''):?>
-            <img src="<?php echo $news->news_img?>" alt="">
+            <img src="/proj/assets/images/<?php echo $news->news_img?>" width="100%" alt="">
         <?php endif?>
 
     <?php endforeach?>

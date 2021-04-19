@@ -12,3 +12,15 @@
     align-items: center;
     justify-content: space-between;
 }
+
+.search{
+    width: 100%;
+    padding: 30px;
+    box-sizing: border-box;
+}
+.search input{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
