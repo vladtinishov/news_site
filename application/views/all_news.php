@@ -32,8 +32,21 @@
 
     </div>
 
-    <div v-if="show_searched" class="show_searced_news">
-        {{news_data}}
+    <div class="news_list_style" v-if="show_searched" class="show_searced_news">
+        <div class="news_list" v-for="news in news_data">
+                <div class="news_header">
+                    <h1 class="news_title">
+                        <a v-bind:href="'getnews/' + news.news_id">
+                            {{news.news_title}}
+                        </a>
+                    </h1>
+                    <div class="news_date">{{news.news_date}}</div>
+                </div>
+
+                <p class="news_text">{{news.news_text}}...</p>
+
+                <img v-bind:src="'/proj/assets/images/' + news.news_img" width="100%" alt="">
+        </div>
     </div>
 </div>
 

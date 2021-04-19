@@ -17,7 +17,10 @@ class News extends CI_Controller{
         $this->load->view('single', $data);
         $this->load->view('templates/footer.php');
     }
-    function getSearchedNews($news_title){
-        $this->news_model->getSearchedNews($news_title);
+    function getSearchedNews(){
+        $_POST = json_decode(file_get_contents('php://input'), true);
+        $news_title = $_POST['title'];
+        $res = $this->news_model->getSearchedNews($news_title);
+        echo json_encode($res);
     }
 }

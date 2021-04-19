@@ -3,7 +3,7 @@ let app = new Vue({
     data: {
         show_all_news: true,
         show_searched: false,
-        news_data: [],
+        news_data: 0,
     },
     methods: {
         show_searched_news: function(){
@@ -11,8 +11,12 @@ let app = new Vue({
             if(input_data !== ''){
                 this.show_all_news = false;
                 this.show_searched = true;
-                axios.get('http://localhost/proj/index.php/news/getsearchednews/' + input_data)
-                    .then(data => this.news_data = data.data);
+                axios.post('http://localhost/proj/index.php/news/getsearchednews', {title: input_data})
+                    .then(data => {
+                        if(data.data != ''){
+                            this.news_data = JSON.parse(data.data);
+                        }
+                    });
             }
             else{
                 this.show_all_news = true;
