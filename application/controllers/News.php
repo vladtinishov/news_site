@@ -17,4 +17,7 @@ class News extends CI_Controller{
         $this->load->view('single', $data);
         $this->load->view('templates/footer.php');
     }
+    function getSearchedNews($news_title){
+        $this->news_model->getSearchedNews($news_title);
+    }
 }

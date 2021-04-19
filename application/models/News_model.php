@@ -40,4 +40,9 @@ class News_model extends CI_Model{
                                 ");
 
     }
+    public function getSearchedNews($news_title){
+        $query = $this->db->query("SELECT * FROM news 
+                                    WHERE news_title='$news_title'");
+        echo json_encode($query->result());
+    }
 }
