@@ -17,7 +17,13 @@ class News_model extends CI_Model{
         return $query->result();
     }
     public function getTodayNews(){
-        $query = $this->db->query('SELECT * FROM news WHERE news_date="'.date('Y-m-d').'"');
+        $query = $this->db->query('SELECT 
+                                    news_id, 
+                                    news_title, 
+                                    news_img, 
+                                    news_date, 
+                                    SUBSTRING(news_text, 1, 50) as news_text
+                                    FROM news WHERE news_date="'.date('Y-m-d').'"');
         return $query->result();
     }
     public function getNews($news_id){
@@ -42,7 +48,7 @@ class News_model extends CI_Model{
     }
     public function getSearchedNews($news_title){
         $query = $this->db->query("SELECT * FROM news 
-                                    WHERE news_title='$news_title'");
+                                    WHERE news_title LIKE '%$news_title%'");
         return json_encode($query->result());
     }
 }
