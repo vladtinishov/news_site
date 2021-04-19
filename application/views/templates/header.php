@@ -15,10 +15,7 @@
 				<li><a href="/proj">Главная</a></li>
 				<li><a href="/proj/index.php/news/getallnews">Архив</a></li>
 			</ul>
-			<ul>
-				<li><a href="#">t</a></li>
-				<li><a href="#">vk</a></li>
-			</ul>
+			
 		</ul>
 	</nav>
 
